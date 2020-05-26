@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "ServiceInjectionCalc";
+    @inject Backend1.Services.IMessS Calc
+}
+
+<h2>ServiceInjectionCalc</h2>
+<div><b>Rand Value First:</b>@Calc.value1</div>
+<div><b>Rand Value Second:</b> @Calc.value2</div>
+<div><b>Add:</b><br> @Calc.value1 + @Calc.value2 = @Calc.Summ()</div>
+<div><b>Sub:</b><br> @Calc.value1 - @Calc.value2 = @Calc.Substr()</div>
+<div><b>Mult:</b><br> @Calc.value1 * @Calc.value2 = @Calc.Mult()</div>
+<div>
+    <b>Div:</b><br> @Calc.value1 / @Calc.value2 =
+    @if (Calc.Divide() == -1)
+    {
+        @: Ошибка! Деление на ноль
+    }
+    else
+    {
+        @Calc.Divide()
+    }
+</div>
+

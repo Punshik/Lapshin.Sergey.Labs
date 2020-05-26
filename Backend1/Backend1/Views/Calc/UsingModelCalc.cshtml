@@ -1,0 +1,26 @@
+﻿
+@model Backend1.Models.DataBase
+
+@{
+    ViewData["Title"] = "UsingModelCalc";
+}
+
+<h2>UsingModelCalc</h2>
+<div><b>Rand Value First:</b>@Model.first</div>
+<div><b>Rand Value Second:</b> @Model.second</div>
+<div><b>Add:</b><br> @Model.first + @Model.second = @Model.summResult</div>
+<div><b>Sub:</b><br> @Model.first - @Model.second = @Model.substrResult</div>
+<div><b>Mult:</b><br> @Model.first * @Model.second = @Model.multResult</div>
+<div>
+    <b>Div:</b><br> @Model.first / @Model.second =
+    @if (Model.divResult == -1)
+    {
+        @: Are u stupid???
+    }
+    else
+    {
+        @Model.divResult
+    }
+
+</div>
+

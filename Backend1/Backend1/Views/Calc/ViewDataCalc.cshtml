@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "ViewDataCalc";
+    var data = ViewData["data"] as Backend1.Models.DataBase;
+
+}
+
+<h2>ViewDataCalc</h2>
+<div><b>Rand Value First:</b> @data.first</div>
+<div><b>Rand Value Second:</b> @data.second</div>
+<div><b>Add:</b><br> @data.first + @data.second = @data.summResult</div>
+<div><b>Sub:</b><br> @data.first - @data.second = @data.substrResult</div>
+<div><b>Mult:</b><br> @data.first * @data.second = @data.multResult</div>
+<div>
+    <b>Div:</b><br> @data.first / @data.second =
+    @if (data.divResult == -1)
+    {
+        @: Are u stupid???
+    }
+    else
+    {
+        @data.divResult
+    }
+</div>
+

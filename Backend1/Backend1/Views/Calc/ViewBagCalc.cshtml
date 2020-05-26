@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "ViewBagCalc";
+}
+
+<h2>ViewBagCalc</h2>
+<div><b>Rand Value First:</b> @ViewBag.data.first</div>
+<div><b>Rand Value Second:</b> @ViewBag.data.second</div>
+<div><b>Add:</b><br> @ViewBag.data.first + @ViewBag.data.second = @ViewBag.data.summResult</div>
+<div><b>Sub:</b><br> @ViewBag.data.first - @ViewBag.data.second = @ViewBag.data.substrResult</div>
+<div><b>Mult:</b><br> @ViewBag.data.first * @ViewBag.data.second = @ViewBag.data.multResult</div>
+<div>
+    <b>Div:</b><br> @ViewBag.data.first / @ViewBag.data.second =
+    @if (ViewBag.data.divResult == -1)
+    {
+        @: Are u stupid???
+    }
+    else
+    {
+        @ViewBag.data.divResult
+    }
+</div>
+
